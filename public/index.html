@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sandhiya S | AI & Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIv5O1RG+cI1cVQ5Q/+qvYX0f4c5c5pMZtcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="home">
+      <nav class="navbar">
+        <div class="logo">Sandhiya<span>S</span></div>
+        <div class="menu" id="navbar-menu">
+          <a href="#home">Home</a>
+          <a href="#about" onclick="switchMenu('expanded')">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="resume-buttons">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            🌙
+          </button>
+          <button class="btn-outline" id="view-resume">View Resume</button>
+          <a href="./resume/Sandhiya_S_Resume.pdf" download class="btn-filled">Download Resume</a>
+        </div>
+        <div class="mobile-controls">
+          <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle theme">
+            🌙
+          </button>
+          <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-subtitle">AI Full-Stack Developer</span>
+          <h2>
+            Designing Intelligent application with <span class="gradient-text">AI Tool(Gen AI) Experiences</span> custom ML pipelines, and real-time analytics.
+          </h2>
+          <p>
+            Hi, I'm <strong>Sandhiya S</strong>,an AI and Full Stack Developer at HEPL, Cuddalore, Tamil Nadu.
+            I love creating smart and user-friendly solutions that make technology more meaningful.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-filled" href="#projects">Explore Projects</a>
+            <a class="btn-outline" href="#contact">Let's Collaborate</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <h3>2+</h3>
+              <p>Industry Internships</p>
+            </div>
+            <div class="metric">
+              <h3>8.67</h3>
+              <p>Current GPA (MCA)</p>
+            </div>
+            <div class="metric">
+              <h3>6+</h3>
+              <p>Projects Delivered</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="./images/Screenshot (254).png" alt="AI Full Stack Developer" />
+            <div class="floating-card">
+              <i class="fas fa-graduation-cap"></i>
+              <!-- <div>
+                <p>MCA</p>
+                <h4>KCET, Cuddalore</h4>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about" id="about">
+        <div class="section-title">
+          <span>About</span>
+          <h2>Fueling Ideas with AI & Full Stack Craft</h2>
+        </div>
+        <div class="about-wrapper">
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                I’m <strong>Sandhiya S</strong>, an AI and Full Stack Developer at HEPL Cuddalore, Tamil Nadu.
+                I love creating smart and user-friendly solutions that make technology more meaningful. 
+              </p>
+              <p>
+                From AI internships to my current role as a trainee software developer at HEPL, I’ve worked with AI-Model,Chatbot, Node.js,
+               PHP, Bootstrap, and OpenAI integrations to bring ideas to production. I’m dedicated, detail-oriented, and always
+                eager to explore emerging technologies that make systems smarter and more efficient.
+              </p>
+              <ul class="about-highlights">
+                <li><i class="fas fa-check"></i> Hands-on experience across AI, full stack, and automation projects</li>
+                <li><i class="fas fa-check"></i> Strong foundation in Node.js, PHP, Python, JavaScript, HTML, CSS, MySQL, MongoDB</li>
+                <li><i class="fas fa-check"></i> Experienced with AI integrations, RAG workflows, and OpenAI APIs</li>
+                <li><i class="fas fa-check"></i> Certified in Python Full Stack, Software Testing, and Prompt Engineering</li>
+              </ul>
+            </div>
+            <div class="skills">
+              <h3>Core Stack &amp; Tools</h3>
+              <div class="skill-grid">
+                <div class="skill-card">
+                  <i class="fas fa-code"></i>
+                  <h4>Languages</h4>
+                  <p>JavaScript (Node.js), PHP, Python(basic)</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fas fa-database"></i>
+                  <h4>Databases</h4>
+                  <p>MySQL, MongoDB</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fas fa-brain"></i>
+                  <h4>AI &amp; Integrations</h4>
+                  <p>OpenAI APIs, Together.AI, Prompt Engineering,Machine Learning, Natural Language Processing</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fas fa-tools"></i>
+                  <h4>Frameworks</h4>
+                  <p>Laravel, Node.js, Bootstrap</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="about-sections-nav">
+            <span class="nav-label">Explore more</span>
+            <div class="nav-links">
+              <button class="active" data-target="services">Services</button>
+              <button data-target="projects">Projects</button>
+              <button data-target="certifications">Certifications</button>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="section-title">
+          <span>Services</span>
+          <h2>What I Love Building</h2>
+        </div>
+        <div class="section-toggle">
+          <button class="toggle-button active" data-view="grid" data-section="services">Grid</button>
+          <button class="toggle-button" data-view="carousel" data-section="services">Carousel</button>
+        </div>
+        <div class="services-grid" data-display="grid">
+          <div class="service-card-flip">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <img src="./images/Screenshot (276).png" alt="AI Experience" />
+                <div class="project-name-overlay">
+                  <h3>Excel-Image Merger Services</h3>
+                </div>
+              </div>
+              <div class="service-card-back">
+                <div class="back-content">
+                  <h4>Usage</h4>
+                  <p>This service using Node.js, Express.js, and ExcelJS to automate inserting and optimizing multiple images within Excel files. Integrated Sharp for image processing and a Bootstrap drag-and-drop interface for seamless batch uploads, enabling easy integration into larger projects.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service-card-flip">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <img src="./images/Screenshot (277).png" alt="Full Stack" />
+                <div class="project-name-overlay">
+                  <h3>Real-Time Sports Scoreboard Service</h3>
+                </div>
+              </div>
+              <div class="service-card-back">
+                <div class="back-content">
+                  <h4>Usage</h4>
+                  <p>This Service using Node.js, Express, Socket.IO, and MySQL, enabling instant score updates, multi-game support, and a responsive stadium-themed UI with WebSocket synchronization.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service-card-flip">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <img src="./images/Screenshot (286).png" alt="Data Solutions" />
+                <div class="project-name-overlay">
+                  <h3>PDF-Excel conversational</h3>
+                </div>
+              </div>
+              <div class="service-card-back">
+                <div class="back-content">
+                  <h4>Usage</h4>
+                  <p>Built a PDF-to-Excel converter using OCR and layout analysis to extract and map table data accurately into Excel, maintaining original formatting and structure like Adobe’s export system.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service-card-flip">
+            <div class="service-card-inner">
+              <div class="service-card-front">
+                <img src="./images/Screenshot (287).png" alt="Innovation" />
+                <div class="project-name-overlay">
+                  <h3>AI Chatbot</h3>
+                </div>
+              </div>
+              <div class="service-card-back">
+                <div class="back-content">
+                  <h4>Usage</h4>
+                  <p> Built a document-based AI chatbot using LLama, NLP, and RAG that lets users ask questions from uploaded files and get accurate, easy-to-understand answers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="services-carousel" data-display="carousel" hidden>
+          <div class="carousel-track">
+            <div class="carousel-card">
+              <i class="fas fa-robot"></i>
+              <h3>AI-Powered Experiences</h3>
+              <p>Designing conversational agents, intelligent chatbots, and automation workflows using OpenAI and Together.AI.</p>
+            </div>
+            <div class="carousel-card">
+              <i class="fas fa-layer-group"></i>
+              <h3>Full Stack Applications</h3>
+              <p>Developing responsive frontends and robust backends with Node.js, Laravel, Bootstrap, and modern tooling.</p>
+            </div>
+            <div class="carousel-card">
+              <i class="fas fa-database"></i>
+              <h3>Data-Driven Solutions</h3>
+              <p>Building data pipelines and predictive models using Python, MongoDB, and MySQL to deliver actionable insights.</p>
+            </div>
+            <div class="carousel-card">
+              <i class="fas fa-lightbulb"></i>
+              <h3>Innovation & Collaboration</h3>
+              <p>Partnering with teams to ideate, prototype, and iterate on intelligent software that solves real-world problems.</p>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-prev" aria-label="Previous service">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-next" aria-label="Next service">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="section-title">
+          <span>Projects</span>
+          <h2>Highlighted Work</h2>
+        </div>
+        <div class="section-toggle">
+          <button class="toggle-button active" data-view="grid" data-section="projects">Grid</button>
+          <button class="toggle-button" data-view="carousel" data-section="projects">Carousel</button>
+        </div>
+        <div class="project-grid" data-display="grid">
+          <article class="project-card">
+            <div class="project-media">
+              <a href="https://example.com/industry-chatbot" target="_blank" rel="noopener">
+                <img src="./images/Screenshot (120).png" alt="Intelligent Chatbot for Industry Documentation" />
+              </a>
+            </div>
+            <div class="project-content">
+              <h3>Industry Documentation Chatbot</h3>
+              <p>
+                Full-stack AI chatbot that streamlines document retrieval with RAG-based search, built with Node.js,
+                MongoDB, and Together.AI.
+              </p>
+              <ul class="project-tags">
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>Together.AI</li>
+                <li>RAG</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://example.com/industry-chatbot" target="_blank" rel="noopener" class="btn-filled">
+                  Live Demo
+                </a>
+                <a href="https://github.com/sandhiyas/industry-chatbot" target="_blank" rel="noopener" class="btn-outline">
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <a href="https://example.com/churn-prediction" target="_blank" rel="noopener">
+                <img src="./images/Screenshot (248).png" alt="Churn Prediction Model" />
+              </a>
+            </div>
+            <div class="project-content">
+              <h3>Customer Churn Prediction</h3>
+              <p>
+                Machine learning model in Python that predicts churn trends, offering visual dashboards and actionable
+                insights for retention planning.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li>
+                <li>Machine Learning</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://example.com/churn-prediction" target="_blank" rel="noopener" class="btn-filled">
+                  Live Demo
+                </a>
+                <a href="https://github.com/sandhiyas/churn-prediction" target="_blank" rel="noopener" class="btn-outline">
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <a href="https://example.com/purchase-automation" target="_blank" rel="noopener">
+                <img src="./images/Screenshot (246).png" alt="Purchase Automation System" />
+              </a>
+            </div>
+            <div class="project-content">
+              <h3>Operational Purchase Automation System</h3>
+              <p>
+                Core PHP workflow that automates product dispatch and arrival tracking, keeping teams informed with
+                real-time updates and alerts.
+              </p>
+              <ul class="project-tags">
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>Automation</li>
+                <li>Bootstrap</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://dev.cavinkare.in/opspurchase" target="_blank" rel="noopener" class="btn-filled">
+                  Live Demo
+                </a>
+                <a href="https://github.com/sandhiyas/purchase-automation" target="_blank" rel="noopener" class="btn-outline">
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="projects-carousel" data-display="carousel" hidden>
+          <div class="carousel-track">
+            <article class="carousel-card">
+              <h3>Industry Documentation Chatbot</h3>
+              <p>Full-stack AI chatbot that streamlines document retrieval with RAG-based search, built with Node.js, MongoDB, and Together.AI.</p>
+              <div class="carousel-links">
+                <a href="https://example.com/industry-chatbot" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/sandhiyas/industry-chatbot" target="_blank" rel="noopener">Source Code</a>
+              </div>
+            </article>
+            <article class="carousel-card">
+              <h3>Customer Churn Prediction</h3>
+              <p>Machine learning model in Python that predicts churn trends, offering visual dashboards and actionable insights for retention planning.</p>
+              <div class="carousel-links">
+                <a href="https://example.com/churn-prediction" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/sandhiyas/churn-prediction" target="_blank" rel="noopener">Source Code</a>
+              </div>
+            </article>
+            <article class="carousel-card">
+              <h3>Purchase Automation System</h3>
+              <p>Core PHP workflow that automates product dispatch and arrival tracking, keeping teams informed with real-time updates and alerts.</p>
+              <div class="carousel-links">
+                <a href="https://dev.cavinkare.in/opspurchase/login.php" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/sandhiyas/purchase-automation" target="_blank" rel="noopener">Source Code</a>
+              </div>
+            </article>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-prev" aria-label="Previous project">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-next" aria-label="Next project">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="certifications" id="certifications">
+        <div class="section-title">
+          <span>Certifications</span>
+          <h2>Continuous Learning</h2>
+        </div>
+        <div class="section-toggle">
+          <button class="toggle-button active" data-view="grid" data-section="certifications">Grid</button>
+          <button class="toggle-button" data-view="carousel" data-section="certifications">Carousel</button>
+        </div>
+        <div class="cert-grid" data-display="grid">
+          <div class="cert-card">
+            <div class="cert-logo">
+              <img src="./images/Screenshot (247).png" alt="Python Certificate" />
+            </div>
+            <div class="cert-info">
+              <h3>Python Full Stack Development</h3>
+              <p>2024 • Training Program</p>
+              <a href="https://example.com/python-fullstack-cert" target="_blank" rel="noopener">View Credential</a>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-logo">
+              <img src="./images/Screenshot (255).png" alt="Software Testing Certificate" />
+            </div>
+            <div class="cert-info">
+              <h3>Software Testing Certification</h3>
+              <p>2023 • Certification Course</p>
+              <a href="https://example.com/software-testing-cert" target="_blank" rel="noopener">View Credential</a>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-logo">
+              <img src="./images/Screenshot (249).png" alt="Prompt Engineering Certificate" />
+            </div>
+            <div class="cert-info">
+              <h3>ChatGPT Prompt Engineering</h3>
+              <p>2025 • Certification</p>
+              <a href="" target="_blank" rel="noopener">View Credential</a>
+            </div>
+          </div>
+        </div>
+        <div class="cert-carousel" data-display="carousel" hidden>
+          <div class="carousel-track">
+            <div class="carousel-card">
+              <h3>Python Full Stack Development</h3>
+              <p>2024 • Training Program</p>
+              <a href="https://example.com/python-fullstack-cert" target="_blank" rel="noopener">View Credential</a>
+            </div>
+            <div class="carousel-card">
+              <h3>Software Testing Certification</h3>
+              <p>2023 • Certification Course</p>
+              <a href="https://example.com/software-testing-cert" target="_blank" rel="noopener">View Credential</a>
+            </div>
+            <div class="carousel-card">
+              <h3>ChatGPT Prompt Engineering</h3>
+              <p>2023 • Training</p>
+              <a href="https://example.com/prompt-engineering-cert" target="_blank" rel="noopener">View Credential</a>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-prev" aria-label="Previous certification">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-next" aria-label="Next certification">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="section-title">
+          <span>Contact</span>
+          <h2>Let’s Collaborate</h2>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p>
+              Interested in AI-driven products, automation, or crafting user-centric applications? Drop a message and
+              we’ll build something impactful together.
+            </p>
+            <ul>
+              <li><i class="fas fa-envelope"></i> sandhiyasambasivams@gamil.com</li>
+              <li><i class="fas fa-phone"></i> +91 7010155564</li>
+              <li><i class="fas fa-location-dot"></i> Panruti,Cuddalore, Tamil Nadu</li>
+            </ul>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-filled">Send Message</button>
+            <p class="form-response" id="form-response"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">AI<span>Stack</span></div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/sandhiya-sambasivam-b34126268/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <!-- Inline SVG for LinkedIn (uses currentColor) -->
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="false" focusable="false">
+              <title>LinkedIn</title>
+              <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0zM8 8h4.8v2.2h.1c.7-1.3 2.4-2.6 4.9-2.6 3.7 0 6 2.5 6 6.9V24h-5v-8.4c0-2-0.04-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.5V24H8V8z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/sandhiya-sm" target="_blank" rel="noopener" aria-label="GitHub">
+            <!-- Inline SVG for GitHub (uses currentColor) -->
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="false" focusable="false">
+              <title>GitHub</title>
+              <path fill="currentColor" d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.28 3.438 9.75 8.205 11.33.6.11.82-.26.82-.58 0-.29-.01-1.05-.016-2.06-3.338.73-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.74.083-.73.083-.73 1.205.085 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.486.99.107-.78.418-1.3.762-1.6-2.665-.3-5.467-1.33-5.467-5.92 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.52.117-3.17 0 0 1.008-.322 3.3 1.23a11.49 11.49 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.65.242 2.867.118 3.17.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.48 5.913.43.37.814 1.096.814 2.21 0 1.6-.014 2.887-.014 3.28 0 .32.216.694.825.576C20.565 22.246 24 17.78 24 12.5 24 5.87 18.63.5 12 .5z"/>
+            </svg>
+          </a>
+          <!-- <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+            <i class="fab fa-x-twitter"></i>
+          </a> -->
+        </div>
+      </div>
+      <p class="footer-copy">© <span id="current-year"></span> Sandhiya S. All rights reserved.</p>
+    </footer>
+
+    <div class="resume-modal" id="resume-modal">
+      <div class="resume-content">
+        <button class="modal-close" id="modal-close" aria-label="Close resume viewer">
+          <i class="fas fa-times"></i>
+        </button>
+        <iframe src="./resume/Sandhiya_S_Resume.pdf" title="Resume Preview"></iframe>
+      </div>
+    </div>
+
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
