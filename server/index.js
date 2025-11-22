@@ -15,7 +15,7 @@ console.log('MAIL_USER:', process.env.MAIL_USER);
 console.log('MAIL_PASSWORD exists:', !!process.env.MAIL_PASSWORD);
 
 const app = express();
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 4000;
 
 app.use(helmet());
 app.use(cors({ origin: process.env.CORS_ORIGIN || '*' }));
