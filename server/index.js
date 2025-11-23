@@ -22,16 +22,16 @@ app.use(cors({ origin: process.env.CORS_ORIGIN || '*' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const limiter = rateLimit({
+const contactLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 100,
+  max: 5,
+  message:{success: false, error: "Too many requests, please try again later."},
   standardHeaders: true,
   legacyHeaders: false,
 });
-app.use(limiter);
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/api/contact', contactRouter);
+app.use('/api/contact', contactLimiter,contactRouter);
 
 app.use('*', (_, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
