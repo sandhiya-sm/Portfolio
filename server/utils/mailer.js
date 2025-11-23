@@ -1,26 +1,29 @@
 import nodemailer from 'nodemailer';
 
+const host = process.env.MAIL_HOST || 'smtp.sendgrid.net';
+const port = parseInt(process.env.MAIL_PORT || '587', 10);
+const secure = (process.env.MAIL_SECURE || 'false') === 'true';
+
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host,
+  port,
+  secure,
   auth: {
-    user: 'sandhiyasambasivams@gmail.com',
-    pass: 'abftvecfwsqdlnpy',
-  },
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASSWORD
+  }
 });
 
-export const sendEmail = async ({ name, email, message }) => {
-  const mailOptions = {
-    from: 'AI Portfolio <sandhiyasambasivams@gmail.com>',
-    to: 'sandhiyasambasivams@gmail.com',
-    subject: `New portfolio contact from ${name}`,
-    html: `
-      <h2>New Contact Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Message:</strong></p>
-      <p>${message.replace(/\n/g, '<br>')}</p>
-    `,
-  };
+transporter.verify()
+  .then(() => console.log('Mailer: SMTP connection OK'))
+  .catch(err => console.error('Mailer: SMTP verify failed', err));
 
-  await transporter.sendMail(mailOptions);
-};
+export async function sendContactEmail({ name, email, message }) {
+  const mailOptions = {
+    from: `"${name}" <${process.env.MAIL_USER}>`,
+    to: process.env.MAIL_RECIPIENT || process.env.MAIL_USER,
+    subject: `New contact from ${name} (${email})`,
+    text: `${message}\n\nFrom: ${name} <${email}>`
+  };
+  return transporter.sendMail(mailOptions);
+}

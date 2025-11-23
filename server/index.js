@@ -37,6 +37,19 @@ app.use('*', (_, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// error handler
+app.use((err, req, res, next) => {
+  console.error('Unhandled error:', err);
+  res.status(500).json({ success: false, error: err.message || 'Server error' });
+});
+
+process.on('unhandledRejection', (reason) => {
+  console.error('unhandledRejection', reason);
+});
+process.on('uncaughtException', (err) => {
+  console.error('uncaughtException', err);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
