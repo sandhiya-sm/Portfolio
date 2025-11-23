@@ -27,3 +27,5 @@ export async function sendContactEmail({ name, email, message }) {
   };
   return transporter.sendMail(mailOptions);
 }
+
+export { sendContactEmail as sendEmail };

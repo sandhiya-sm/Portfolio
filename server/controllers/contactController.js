@@ -1,4 +1,4 @@
-import { sendEmail } from '../utils/mailer.js';
+import { sendContactEmail } from '../utils/mailer.js';
 
 const validateContactPayload = ({ name, email, message }) => {
   if (!name || name.trim().length < 2) {
@@ -14,18 +14,25 @@ const validateContactPayload = ({ name, email, message }) => {
   return null;
 };
 
-export const sendContactMessage = async (req, res) => {
+export default async function contactHandler(req, res) {
   try {
+    const { name, email, message } = req.body || {};
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ success: false, error: 'Missing name, email or message' });
+    }
+
     const validationError = validateContactPayload(req.body);
     if (validationError) {
       return res.status(400).json({ success: false, error: validationError });
     }
 
-    await sendEmail(req.body);
+    const info = await sendContactEmail({ name, email, message });
+    console.log('Email sent:', info && (info.messageId || info.response) || info);
 
-    return res.status(200).json({ success: true, message: 'Message sent successfully.' });
-  } catch (error) {
-    console.error('Contact form error:', error);
-    return res.status(500).json({ success: false, error: 'Internal server error. Please try again later.' });
+    return res.json({ success: true });
+  } catch (err) {
+    console.error('Contact handler error:', err);
+    return res.status(500).json({ success: false, error: err.message || 'Server error' });
   }
-};
+}
